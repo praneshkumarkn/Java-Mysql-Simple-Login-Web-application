@@ -6,7 +6,7 @@
  String password = request.getParameter("password"); 
  
  Class.forName ("com.mysql.jdbc.Driver"); 
- Connection con = DriverManager.getConnection("jdbc:sqlserver://catlog.database.windows.net:1433;database=catlog;user=kumar@catlog;password=admin@123;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;");
+ Connection con = DriverManager.getConnection("jdbc:mysql://blackdb.mysql.database.cloudapi.de:3306/blackdb", "stark", "Welcome@123");
  Statement st = con.createStatement(); 
  ResultSet rs; 
  rs = st.executeQuery("select * from userdata where username='" + userName + "' and password='" + password + "'");
