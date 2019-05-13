@@ -6,7 +6,7 @@
 	String lastName = request.getParameter("lastName"); 
 	String email = request.getParameter("email"); 
 	Class.forName ( "com.mysql.jdbc.Driver"); 
-	Connection con = DriverManager.getConnection("jdbc:sqlserver://catlog.database.windows.net:1433/catlog", "kumar", "admin@123");
+	Connection con = DriverManager.getConnection("jdbc:mysql://blackdb.mysql.database.cloudapi.de:3306/blackdb", "stark", "Welcome@123");
 	Statement st = con.createStatement(); 
 	int i = st.executeUpdate("insert into userdata(first_name, last_name, email, username, password, regdate) values ('" + firstName + "','" + lastName + "','" + email + "','" + userName + "','" + password + "', CURDATE())");
 	if (i > 0) { 
